@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F861BAF3-B624-43B6-A628-C1AFFD9CA4B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Facebook</RootNamespace>
+    <AssemblyName>Facebook.OpenGraph</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Facebook.OpenGraph.xml</DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>
+    </NoWarn>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\dependencies\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Graph\Album.cs" />
+    <Compile Include="Graph\AsynchronousGraphException.cs" />
+    <Compile Include="Graph\AuthorizationPromptStyle.cs" />
+    <Compile Include="Graph\Comment.cs" />
+    <Compile Include="OpenGraph\Configuration\ApplicationConfigurationElement.cs" />
+    <Compile Include="OpenGraph\Configuration\ApplicationConfigurationElementCollection.cs" />
+    <Compile Include="OpenGraph\Configuration\OpenGraphConfigurationSection.cs" />
+    <Compile Include="Graph\Connection.cs" />
+    <Compile Include="Graph\Education.cs" />
+    <Compile Include="Graph\Employment.cs" />
+    <Compile Include="Graph\EventPrivacy.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Graph\FriendTag.cs" />
+    <Compile Include="Graph\GlobalSuppressions.cs" />
+    <Compile Include="Graph\GraphEvent.cs" />
+    <Compile Include="Graph\GraphMethodException.cs" />
+    <Compile Include="Graph\Group.cs" />
+    <Compile Include="Graph\IConnectedGraphEntity.cs" />
+    <Compile Include="Graph\IConnection.cs" />
+    <Compile Include="Graph\InvalidSessionException.cs" />
+    <Compile Include="Graph\ISearchableEntity.cs" />
+    <Compile Include="Graph\ISubscribableEntity.cs" />
+    <Compile Include="OpenGraph\Extensions.cs" />
+    <Compile Include="OpenGraph\Metadata\OpenGraphTypeNameAttribute.cs" />
+    <Compile Include="Graph\GraphAuthenticatedSession.cs" />
+    <Compile Include="Graph\GraphAuthorizationResult.cs" />
+    <Compile Include="Graph\GraphDesktopSession.cs" />
+    <Compile Include="Graph\GraphSession.cs" />
+    <Compile Include="Graph\Page.cs" />
+    <Compile Include="Graph\RealTimeUpdateManager.cs" />
+    <Compile Include="Graph\RetrieveAuthorizationCallback.cs" />
+    <Compile Include="Graph\SearchResult.cs" />
+    <Compile Include="Graph\SubscriptionRegistration.cs" />
+    <Compile Include="Graph\UnmatchedTypeDefinitionException.cs" />
+    <Compile Include="OpenGraph\OpenGraphObjectType.cs" />
+    <Compile Include="Util\AccessToken.cs" />
+    <Compile Include="Util\DynamicJsonManager.cs" />
+    <Compile Include="Util\EntityFromTokenFactory.cs" />
+    <Compile Include="Util\ExceptionParser.cs" />
+    <Compile Include="Util\Fetcher.cs" />
+    <Compile Include="Graph\Like.cs" />
+    <Compile Include="Graph\ExtendedPermissions.cs" />
+    <Compile Include="Graph\Link.cs" />
+    <Compile Include="Graph\Message.cs" />
+    <Compile Include="Graph\Note.cs" />
+    <Compile Include="Graph\OAuthException.cs" />
+    <Compile Include="Graph\GraphEntity.cs" />
+    <Compile Include="Graph\Friend.cs" />
+    <Compile Include="OpenGraph\Metadata\JsonPropertyAttribute.cs" />
+    <Compile Include="OpenGraph\Metadata\RequiresPermissionAttribute.cs" />
+    <Compile Include="OpenGraphException.cs" />
+    <Compile Include="Graph\Photo.cs" />
+    <Compile Include="Graph\Post.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Graph\Status.cs" />
+    <Compile Include="Graph\User.cs" />
+    <Compile Include="Util\GraphExpressionParser.cs" />
+    <Compile Include="Util\SubscriberParser.cs" />
+    <Compile Include="Util\UnixTime.cs" />
+    <Compile Include="Graph\Video.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
